@@ -72,16 +72,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 }
 
 ###
-GET http://127.0.0.1:8000/task/3/
-Accept: application/json
-
-###
-PUT http://127.0.0.1:8000/task/3/
+POST http://127.0.0.1:8000/api/jwt_login/
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1MTYzMTI1LCJpYXQiOjE3OTUxNjI4MjUsImp0aSI6IjUyNzJmYzY4YWNhZTQxNTViMDYzZGM2ODkzODA5YWRmIiwidXNlcl9pZCI6IjMifQ.lQuKq_SaRzyxAyiSiT9XpxXPYvOhVML64AUha4XzEgQ
 
 {
-    
+    "refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NTI0OTE1OCwiaWF0IjoxNzk1MTYyNzU4LCJqdGkiOiJhN2RkNmZlN2EyODk0YTE1OTdjYzY2OTJhZTViMzVmMiIsInVzZXJfaWQiOiIzIn0.IXqvAIxIsQZmsI6DteuDlOcTN-gZ7rC_NMTj3QO6FOk"
 }
-
-###
-DELETE http://127.0.0.1:8000/task/3/
