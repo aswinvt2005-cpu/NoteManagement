@@ -1,0 +1,83 @@
+###
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username": "nivedya",
+    "email": "nivedya@gmail.com",
+    "password": "nivedya@123"
+    
+}
+
+###
+POST http://127.0.0.1:8000/api/login/
+Content-Type: application/json
+
+{
+    "username": "nivedya",
+    "password": "nivedya@123"
+}
+
+###
+GET http://127.0.0.1:8000/api/notes/
+Accept: application/json
+Authorization: Token 49b69a25939202dd483178cb5fe21b3c88415cf5 
+
+###
+POST http://127.0.0.1:8000/api/notes/
+Content-Type: application/json
+Authorization: Token 4a095796671786e6fdaf879d388fa3df126d87c8
+
+{
+    "title":"python",
+    "description":"introdution to python programing"
+}
+
+###
+POST http://127.0.0.1:8000/api/logout/
+Content-Type: application/json
+Authorization: Token 4a095796671786e6fdaf879d388fa3df126d87c8
+
+###
+POST http://127.0.0.1:8000/api/jwt_login/
+Content-Type: application/json
+
+{
+    "username":"nivedya",
+    "password":"nivedya@123"
+}
+
+###
+GET  http://127.0.0.1:8000/api/tasks/
+Accept: application/json
+Authorization: 
+
+POST http://127.0.0.1:8000/api/tasks/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1MTYzMTI1LCJpYXQiOjE3OTUxNjI4MjUsImp0aSI6IjUyNzJmYzY4YWNhZTQxNTViMDYzZGM2ODkzODA5YWRmIiwidXNlcl9pZCI6IjMifQ.lQuKq_SaRzyxAyiSiT9XpxXPYvOhVML64AUha4XzEgQ
+
+{
+    "title":"prime Number",
+    "description":"python program to find prime numbers",
+    "due_date":"2026-11-20"
+}
+
+###
+POST http://127.0.0.1:8000/api/refresh/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1MTYzMTI1LCJpYXQiOjE3OTUxNjI4MjUsImp0aSI6IjUyNzJmYzY4YWNhZTQxNTViMDYzZGM2ODkzODA5YWRmIiwidXNlcl9pZCI6IjMifQ.lQuKq_SaRzyxAyiSiT9XpxXPYvOhVML64AUha4XzEgQ
+
+{
+    "refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NTI0OTE1OCwiaWF0IjoxNzk1MTYyNzU4LCJqdGkiOiJhN2RkNmZlN2EyODk0YTE1OTdjYzY2OTJhZTViMzVmMiIsInVzZXJfaWQiOiIzIn0.IXqvAIxIsQZmsI6DteuDlOcTN-gZ7rC_NMTj3QO6FOk"
+}
+
+###
+GET http://127.0.0.1:8000/task/3/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/task/3/
+Content-Type: application/json
+
+###
+DELETE http://127.0.0.1:8000/task/3/
